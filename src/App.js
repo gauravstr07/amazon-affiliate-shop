@@ -16,12 +16,19 @@ function App() {
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const handlePrev = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 scroll to top
+    }
   };
+  
 
   const handleHeaderClick = () => {
     setCurrentPage(1);
@@ -36,10 +43,11 @@ function App() {
     const page = Number(inputPage);
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       alert(`Please enter a valid page number (1 to ${totalPages})`);
     }
-    setInputPage(""); // optional
+    setInputPage("");
   };
 
   return (
