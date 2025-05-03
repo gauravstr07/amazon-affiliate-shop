@@ -1,5 +1,5 @@
 import React from "react";
-
+import './ProductCard.css'; // ✅ CSS import
 const fallbackImage = "https://projectfba.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/07/no-image-logo.jpg.webp";
 
 const ProductCard = ({ title, imageUrl, productUrl }) => {

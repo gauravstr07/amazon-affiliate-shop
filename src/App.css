@@ -119,3 +119,41 @@ body {
 .adsbygoogle {
   margin-top: 20px;
 }
+
+.goto-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.goto-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100px;
+  transition: border 0.3s ease;
+}
+
+.goto-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.goto-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.goto-button:hover {
+  background-color: #45a049;
+}
